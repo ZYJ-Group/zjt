@@ -1,18 +1,18 @@
 # SAR 图像智能解译与持续式目标识别
 
-![](C:\Users\admin\Desktop\leida\ScreenShot_2026-04-28_234957_597.png)
+![](https://github.com/ZYJ-Group/zjt/blob/main/26/leida/ScreenShot_2026-04-28_234957_597.png)
 
 遇到的挑战是数据持续增多，类别持续变化，标签又跟不上，所以模型必须能边识别、边更新、边管理风险，模型要提前响应，不能等标注完全更新。
 
-![](C:\Users\admin\Desktop\leida\ScreenShot_2026-04-28_234752_085.png)
+![](https://github.com/ZYJ-Group/zjt/blob/main/26/leida/ScreenShot_2026-04-28_234752_085.png)
 
 模型一开始只认识一部分类别，后面遇到未知新类别时，要能先发现它是未知类，再人工标注，最后把新类别加入模型中继续训练。
 
-![](C:\Users\admin\Desktop\leida\ScreenShot_2026-04-28_234809_038.png)
+![](https://github.com/ZYJ-Group/zjt/blob/main/26/leida/ScreenShot_2026-04-28_234809_038.png)
 
 在 SAR 目标识别中，随着新数据不断进入，样本分布会发生变化，模型可能误判。因此需要通过分布可靠性建模、分类可靠性评估和未知新类检测，判断哪些样本可信、哪些样本需要修正、哪些样本可能属于新类别，从而实现 SAR 目标样本库的可靠更新管理。
 
-![](C:\Users\admin\Desktop\leida\ScreenShot_2026-04-28_235941_881.png)
+![](https://github.com/ZYJ-Group/zjt/blob/main/26/leida/ScreenShot_2026-04-28_235941_881.png)
 
 新 SAR 样本进入系统后，先用分布可靠性判断它是否属于已有类别，再用分类可靠性判断模型预测是否正确；高可靠样本自动标注并更新样本库，低可靠样本交给人工标注，未知样本则创建新类别，从而降低误标注风险并提高样本库更新质量.
 
